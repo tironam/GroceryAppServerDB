@@ -1,5 +1,11 @@
 const mysql = require('mysql2')
 
-const db = mysql.createConnection(process.env.JAWSDB_URL || process.env.LOCAL_URL)
+const db = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'rootroot',
+    database: 'grocery_db'
+})
 
 module.exports = db
